@@ -1,0 +1,168 @@
+
+@media screen and (max-width: 500px) {
+  .container {
+    padding: 7rem 1rem 0 1rem;
+  }
+  .title h1 {
+    font-size: 2.5rem;
+  }
+}
+
+
+.container {
+
+  background-image: radial-gradient(circle, #d0deff, #799cdf, #5f84b6, #4179b1, #006eac);
+
+
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  
+  min-height: 180vh;
+  padding: 4rem 1.5rem 0 1.5rem;
+  margin: 0 auto;
+
+  .title{
+    
+    text-align: center;
+    margin-bottom: 3rem;
+    h1 {
+        color: #bfd2ec;
+        font-size: 3.75rem;
+        position: relative;
+    font-weight: 1000;
+    text-align: center;
+
+        text-shadow: -2px 3px 6px rgba(0, 0, 0, 0.48);
+      }
+        span {
+            color: #e7e1ec;
+            text-transform: uppercase;
+            font-size: 1.75rem;
+            font-weight: 800;
+            letter-spacing: 5px;}
+        text-shadow: -2px 3px 6px rgba(0, 0, 0, 0.48);
+
+  } 
+
+
+  .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    text-shadow: -2px 3px 6px rgba(0, 0, 0, 0.48);
+
+
+    @media screen and (max-width: 350px) {
+    }
+    button {
+      color: #000;
+      background: #fff;
+      padding: 0.65rem 1rem;
+      border-radius: 14px;
+      font-size: 1rem;
+      text-transform: capitalize;
+      cursor: pointer;
+      border: none;
+      margin-top: 0.7rem;
+      font-family: "Poppins";
+      &.active {
+        background: #9d33f4;
+        color: #fff;
+      }
+    }
+  }
+  .workImages {
+    margin-top: 5rem;
+    width: 80vw;
+    margin: auto;
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+
+
+    @media screen and (max-width: 800px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (max-width: 600px) {
+      grid-template-columns: 1fr;
+    }
+
+  }
+  
+}
+
+
+// .workImage {
+// justify-content: center;
+    
+//   max-width: 100%;
+//   height: 100%;
+//   flex:1 1 200px;
+//   margin-left: auto;
+//   margin-right: auto;
+//   position: relative;
+
+
+//   @media only screen and (max-width: 600px) {
+//     max-width: 350px;
+//   }
+
+//   img {
+//     width: 100%;
+//     height: 100%;
+//     object-fit: cover;
+//   }
+
+// }
+
+// _______________________________________________________________
+
+
+// addition thing to add in future ,  put up and check
+
+// .talk {
+//   margin-top: 3rem;
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   padding: 1rem;
+//   border-radius: 14px;
+//   max-width: 700px;
+//   margin-left: auto;
+//   margin-right: auto;
+//   flex-wrap: wrap;
+//   gap: 1rem;
+
+//   .talk_left {
+//     h3 {
+//       font-size: 1.5rem;
+
+//       span {
+//         font-size: 3.5rem;
+//         color: #0f3bffd6;
+
+//         @media screen and (max-width: 599px) {
+//           font-size: 2rem;
+//         }
+
+//         @media screen and (max-width: 360px) {
+//           font-size: 1.5rem;
+//         }
+//       }
+
+   
+//     }
+//   }
+//   .talk_right {
+//     align-self: flex-end;
+//     margin-bottom: 1.5rem;
+//     // background: #8c12f0;
+//     padding: 0.65rem 1rem;
+//     border-radius: 14px;
+//     font-size: 0.85rem;
+//     nsform: capitalize;
+//   }
+// }

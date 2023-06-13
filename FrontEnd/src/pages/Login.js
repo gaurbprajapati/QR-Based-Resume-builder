@@ -37,7 +37,7 @@ function Login() {
             <section>
 
                 <div className="auth-parent">
-                    <h1 style={{ marginRight: '90px', color: 'white', fontSize: '300%' }} >LOGIN TO TEAM VICTOR <br /> RESUME BUILDER</h1>
+                    <h1 style={{ marginRight: '90px', color: 'white', fontSize: '300%' }} >LOGIN TO TECH TONIC<br /> </h1>
                     <Form layout='vertical' onFinish={onfinish}>
                         <h1>Login</h1>
                         {loading && (<Spin size='large' />)}

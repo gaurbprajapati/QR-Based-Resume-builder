@@ -37,7 +37,7 @@ function Register() {
         <div className="auth-parent">
             {loading && (<Spin size='large' />)}
 
-            <h1 style={{ marginRight: '90px', color: 'white', fontSize: '300%' }} >REGISTER TO  VICTOR <br /> RESUME BUILDER</h1>
+            <h1 style={{ marginRight: '90px', color: 'white', fontSize: '300%' }} >REGISTER TO TECH <br /> TONIC</h1>
 
             <Form layout='vertical' onFinish={onfinish}>
                 <h1>REGISTER</h1>

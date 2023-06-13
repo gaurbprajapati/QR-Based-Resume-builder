@@ -5,6 +5,12 @@ import template2img from "../pages/templates/template2.png";
 import "../resources/templates.css";
 import { useNavigate } from "react-router-dom";
 
+// import HeroSection from '../pages/HeroSection'
+import HeroSection from "./Home/HeroSection";
+import ResourceCard from "../components/ResourceCard/ResourceCard";
+import ClubCard from '../components/ClubCard/Clubcard.jsx'
+import Footer from '../components/Footer/Footer'
+
 function Home() {
     const navigate = useNavigate();
     const templates = [
@@ -22,8 +28,15 @@ function Home() {
         <>
 
             <DefaultLayout>
+                <HeroSection />
+                <ResourceCard />
+                <ClubCard />
+                {/* <h1>Hello welcome</h1> */}
+
 
                 <div className="row home" >
+                    {/* <HeroSection /> */}
+
                     {templates.map((template, index) => {
                         return (
                             <div className="col-md-4  " style={{ marginLeft: '120px' }}>

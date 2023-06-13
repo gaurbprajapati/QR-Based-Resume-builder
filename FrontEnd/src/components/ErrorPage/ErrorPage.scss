@@ -1,0 +1,16 @@
+.error-container {
+  margin-top: 5rem;
+  text-align: center;
+  padding: 10rem;
+  Link {
+    text-decoration: none;
+  }
+  .home {
+    display: flex;
+    justify-content: center;
+    .icon {
+      padding-top: 6px;
+    }
+    text-align: center;
+  }
+}
