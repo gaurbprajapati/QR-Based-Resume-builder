@@ -28,9 +28,9 @@ function Home() {
         <>
 
             <DefaultLayout>
-                <HeroSection />
+                {/* <HeroSection />
                 <ResourceCard />
-                <ClubCard />
+                <ClubCard /> */}
                 {/* <h1>Hello welcome</h1> */}
 
 
