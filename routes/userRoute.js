@@ -1,12 +1,11 @@
 const express = require("express");
-const User = require("../models/userModel");
 const app = express.Router();
 
-import { userRegister, userLogin, userUpdate } from "../controllers/user";
+const { userRegister, userLogin, userUpdate } = require("../controllers/user.js");
 
-app.post("/login", userRegister);
+app.post("/login", userLogin);
 
-app.post("/register", userLogin);
+app.post("/register", userRegister);
 
 app.post("/update", userUpdate);
 

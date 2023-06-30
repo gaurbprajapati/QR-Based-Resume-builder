@@ -1,18 +1,16 @@
+const User = require("../models/userModel");
 
-
-export const userRegister = async (req, res) => {
+const userRegister = async (req, res) => {
     try {
         const newuser = new User(req.body);
         await newuser.save();
-        res.send("Registration Successfull");
+        res.send("Registration Successful");
     } catch (error) {
         res.status(400).json(error);
-
     }
-}
+};
 
-
-export const userLogin = async (req, res) => {
+const userLogin = async (req, res) => {
     try {
         const result = await User.findOne({
             username: req.body.username,
@@ -20,17 +18,16 @@ export const userLogin = async (req, res) => {
         });
 
         if (result) {
-            //   res.send(result);
-            res.send(result)
+            res.send(result);
         } else {
             res.status(400).json("Login failed");
         }
     } catch (error) {
         res.status(400).json(error);
     }
-}
+};
 
-export const userUpdate = async (req, res) => {
+const userUpdate = async (req, res) => {
     try {
         await User.findOneAndUpdate({ _id: req.body._id }, req.body);
         const user = await User.findOne({ _id: req.body._id });
@@ -38,4 +35,6 @@ export const userUpdate = async (req, res) => {
     } catch (error) {
         res.status(400).json(error);
     }
-}
+};
+
+module.exports = { userRegister, userLogin, userUpdate };
