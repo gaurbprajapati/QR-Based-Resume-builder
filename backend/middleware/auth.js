@@ -1,7 +1,7 @@
-import { User } from "../models/User.js";
-import jwt from "jsonwebtoken";
+const User = require("../models/User.js");
+const jwt = require("jsonwebtoken");
 
-export const isAuthenticated = async (req, res, next) => {
+const isAuthenticated = async (req, res, next) => {
   const { token } = req.cookies;
 
   if (!token)
@@ -15,3 +15,4 @@ export const isAuthenticated = async (req, res, next) => {
   req.user = await User.findById(decoded._id);
   next();
 };
+module.exports = { isAuthenticated }

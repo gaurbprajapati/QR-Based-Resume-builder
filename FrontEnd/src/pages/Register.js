@@ -61,7 +61,7 @@ function Register() {
                             Click Here to Login
                         </Button>
                     </Link>
-                    <Button onClick={() => navigate("/home")} style={{ color: 'white', marginLeft: '50px' }} name='Primary' htmlType='submit'>
+                    <Button onClick={() => Navigate("/home")} style={{ color: 'white', marginLeft: '50px' }} name='Primary' htmlType='submit'>
                         REGISTER
                     </Button>
                 </div>
