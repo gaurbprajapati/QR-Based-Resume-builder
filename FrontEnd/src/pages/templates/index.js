@@ -20,12 +20,16 @@ function Templates() {
       case "2": {
         return <Template2 />;
       }
+      default: {
+        return null; // or handle the default case accordingly
+      }
     }
   };
 
-  const func = (index) => {
-    alert(`http://localhost:3000/templates/${index + 1}`);
-  };
+  //const func = (index) => {
+  //alert(`http://localhost:3000/templates/${index + 1}`);
+  //};
+
   return (
     <DefaultLayout>
       <div className="d-flex justify-content-end my-5 mx-5">
@@ -35,7 +39,7 @@ function Templates() {
         <Button className="mx-5" onClick={handlePrint}>
           Print
         </Button>
-        <Button className="back-btn" onClick={() => navigate("/profile")}>
+        <Button className="back-btn" onClick={() => Navigate("/profile")}>
           Edit Details
         </Button>
       </div>

@@ -2,13 +2,14 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import Home from './pages/Home';
 import Profile from './pages/Profile';
-import DefaultLayout from './components/DefaultLayout';
+// import DefaultLayout from './components/DefaultLayout';
 import Templates from './pages/templates';
 import './App.css';
 // import 'antd/dist/antd.less';
 // import 'antd/dist/antd.min.css;
 import 'antd/dist/antd.less';
-import { Button } from 'antd';
+
+// import { Button } from 'antd';
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 function App() {
