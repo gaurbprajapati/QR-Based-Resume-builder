@@ -15,7 +15,7 @@ function Profile() {
     const onfinish = async (values) => {
         setLoading(true);
         try {
-            const result = await axios.post("api/user/update", { ...values, _id: user._id });
+            const result = await axios.post("api/user/update/", { ...values, _id: user._id });
 
             //this will update data if any user already register and updated and want to edit the profile 
             //result.data update the updated data in local storage to mongo

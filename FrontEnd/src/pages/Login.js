@@ -12,7 +12,7 @@ function Login() {
     const onfinish = async (values) => {
         setLoading(true);
         try {
-            const user = await axios.post("api/user/login", values);
+            const user = await axios.post("api/user/login/", values);
             setLoading(false);
             // message.success("Login successfull");
             localStorage.setItem('sheyresume-user', JSON.stringify(user.data));

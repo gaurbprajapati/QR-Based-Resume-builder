@@ -1,13 +1,13 @@
-const User = require("../models/userModel");
-
-const bcrypt = require("bcrypt")
-
-const sendCookie = require("../utils/features.js");
-const validationResult = require('express-validator');
-
+// Import modules using ES6 module syntax
+import { User } from '../models/userModel.js';
+import bcrypt from 'bcrypt';
+import { sendCookie } from '../utils/features.js';
+import validationResult from 'express-validator';
 
 
-const register = async (req, res, next) => {
+
+
+export const register = async (req, res, next) => {
     try {
         const {
             username,
@@ -64,7 +64,7 @@ const register = async (req, res, next) => {
 };
 
 
-const login = async (req, res, next) => {
+export const login = async (req, res, next) => {
     try {
         const { username, email, password } = req.body;
 
@@ -101,7 +101,7 @@ const login = async (req, res, next) => {
 };
 
 
-const logout = (req, res) => {
+export const logout = (req, res) => {
     res.status(200)
         .cookie("token", "", {
             expires: new Date(Date.now()),
@@ -115,7 +115,7 @@ const logout = (req, res) => {
 
 
 
-const userRegister = async (req, res) => {
+export const userRegister = async (req, res) => {
     try {
         const newuser = new User(req.body);
         await newuser.save();
@@ -125,7 +125,7 @@ const userRegister = async (req, res) => {
     }
 };
 
-const userLogin = async (req, res) => {
+export const userLogin = async (req, res) => {
     try {
         const result = await User.findOne({
             username: req.body.username,
@@ -142,7 +142,7 @@ const userLogin = async (req, res) => {
     }
 };
 
-const userUpdate = async (req, res) => {
+export const userUpdate = async (req, res) => {
     try {
         await User.findOneAndUpdate({ _id: req.body._id }, req.body);
         const user = await User.findOne({ _id: req.body._id });
@@ -152,4 +152,8 @@ const userUpdate = async (req, res) => {
     }
 };
 
-module.exports = { userRegister, userLogin, userUpdate };
+export const check = (req, res) => {
+    res.send('Working World!')
+}
+
+// module.exports = { userRegister, userLogin, userUpdate };

@@ -1,13 +1,22 @@
-const express = require("express");
-const app = express.Router();
-
-const { userRegister, userLogin, userUpdate } = require("../controllers/user.js");
-
-app.post("/login", userLogin);
-
-app.post("/register", userRegister);
-
-app.post("/update", userUpdate);
+import express from "express";
 
 
-module.exports = app;
+import { userRegister, userLogin, userUpdate, check } from '../controllers/user.js';
+
+const router = express.Router();
+
+router.post("/login", userLogin);
+
+router.post("/register", userRegister);
+
+router.post("/update", userUpdate);
+
+// router.get("/test",check);
+router.get("/test", (req, res) => {
+    res.send('Working World!')
+});
+
+
+
+
+export default router;
