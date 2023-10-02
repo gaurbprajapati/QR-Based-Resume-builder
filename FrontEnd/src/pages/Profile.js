@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import DefaultLayout from '../components/DefaultLayout'
 import 'antd/dist/antd.css';  // this most import line to use antd
 import { Tabs, Form, Button, Spin, message } from 'antd'

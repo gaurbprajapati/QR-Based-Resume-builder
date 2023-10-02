@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Button, Checkbox, Form, Input, Spin } from 'antd';
+import { Button, Form, Input, Spin } from 'antd';
 import '../resources/authentication.css'
 // import { Link } from '@mui/icons-material';
 import { Link, useNavigate } from 'react-router-dom';

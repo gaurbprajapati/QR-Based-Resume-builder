@@ -1,6 +1,6 @@
 import { jugard } from "../../Data";
 
-import React, { useState, useEffect } from "react";
+// import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 import Typewriter from "typewriter-effect";
@@ -9,12 +9,12 @@ import "./ResourceCard.scss";
 import Maincard from "../Maincard/Maincard";
 
 const ResourceCard = () => {
-  const [abouts, setAbouts] = useState([]);
+  // const [abouts, setAbouts] = useState([]);
 
-  useEffect(() => {
-    // console.log('useeffect is triggerin resource ');
-    setAbouts(jugard);
-  }, []);
+  // useEffect(() => {
+  //   // console.log('useeffect is triggerin resource ');
+  //   setAbouts(jugard);
+  // }, []);
 
   return (
     <>

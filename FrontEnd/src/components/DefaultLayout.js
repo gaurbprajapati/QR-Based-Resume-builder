@@ -1,8 +1,8 @@
 import React from 'react';
 import './../resources/defaultlayout.css'
-import { Dropdown, Button, Menu } from "antd";
+// import { Button, Menu } from "antd";
 import { useNavigate, Link } from 'react-router-dom';
-import { UserOutlined } from "@ant-design/icons";
+// import { UserOutlined } from "@ant-design/icons";
 function DefaultLayout(props) {
     const user = JSON.parse(localStorage.getItem('sheyresume-user'))
     const navigate = useNavigate();
