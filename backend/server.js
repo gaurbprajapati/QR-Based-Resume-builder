@@ -1,6 +1,8 @@
 const express = require('express')
 const app = express()
 const dbConnect = require('./dbConnect')
+
+const cors = require('cors')
 app.use(express.json())
 // const port = process.env.PORT || 5000
 const port = 5000
@@ -8,7 +10,13 @@ const userRoute = require('./routes/userRoute')
 const path = require('path')
 app.use('/api/user', userRoute)
 
-
+app.use(
+    cors({
+        origin: ["https://buildresumeqr.netlify.app/"],
+        methods: ["GET", "POST", "PUT", "DELETE"],
+        credentials: true,
+    })
+);
 
 
 if (process.env.NODE_ENV === 'production') {
