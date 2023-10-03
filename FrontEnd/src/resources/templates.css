@@ -1,4 +1,8 @@
 /* homepage templates styling */
+.template1-parent{
+
+    background-color: aliceblue;
+}
 .home .template{
     margin: 20px;
     box-shadow: 0 0 5px gray;

@@ -39,7 +39,7 @@ function Templates() {
         <Button className="mx-5" onClick={handlePrint}>
           Print
         </Button>
-        <Button className="back-btn" onClick={() => Navigate("/profile")}>
+        <Button className="back-btn" onClick={() => navigate("/profile")}>
           Edit Details
         </Button>
       </div>

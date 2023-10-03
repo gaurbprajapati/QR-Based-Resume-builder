@@ -28,10 +28,9 @@
 } */
 
 .layout{
-    height: 200vh;
+    height: 160vh;
     padding: 20px 50px;
 }
-
 .header{
     height: 7%;
     background-color: #EAF6F6;
@@ -40,6 +39,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
+    margin-bottom: 30px;
 }
 .header h1{
     color: rgba(0, 0, 0, 0.5);
@@ -50,11 +50,11 @@
     border: 1px solid white !important;
     /* color: rgba(255, 255, 255, 0.5) !important; */
 }
-.content{
+/* .content{
     height: 87%;
     border: 1px solid gray;
     margin-top: 20px;
     border-radius: 5px;
     box-shadow: 0 0 3px rgba(128, 128, 128, 0.486);
     padding: 10px;
-}
+} */

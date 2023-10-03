@@ -113,15 +113,20 @@ export const logout = (req, res) => {
 };
 
 
-
-
 export const userRegister = async (req, res) => {
     try {
-        const newuser = new User(req.body);
-        await newuser.save();
-        res.send("Registration Successful");
+        const existingUser = await User.findOne({ username: req.body.username });
+
+        if (existingUser) {
+            return res.status(400).json({ error: "Username is already registered" });
+        }
+
+        const newUser = new User(req.body);
+        await newUser.save();
+
+        res.status(201).json({ message: "Registration Successful" });
     } catch (error) {
-        res.status(400).json(error);
+        res.status(500).json({ error: "Registration failed. Please try again later." });
     }
 };
 

@@ -1,67 +1,32 @@
 import React from "react";
 import DefaultLayout from "../components/DefaultLayout";
-import templateimg from "../pages/templates/template1.png";
-import template2img from "../pages/templates/template2.png";
-import "../resources/templates.css";
-import { useNavigate } from "react-router-dom";
 
-// import HeroSection from '../pages/HeroSection'
-// import HeroSection from "./Home/HeroSection";
-// import ResourceCard from "../components/ResourceCard/ResourceCard";
-// import ClubCard from '../components/ClubCard/Clubcard.jsx'
-// import Footer from '../components/Footer/Footer'
-
+import '.././resources/Home.css'
+import { Link } from 'react-router-dom';
 function Home() {
-    const navigate = useNavigate();
-    const templates = [
-        {
-            title: "Simple Resume",
-            image: templateimg,
-        },
-        {
-            title: "Highlighted Sections Resume",
-            image: template2img,
-        },
-    ];
+
     return (
 
         <>
 
             <DefaultLayout>
-                {/* <HeroSection />
-                <ResourceCard />
-                <ClubCard /> */}
-                {/* <h1>Hello welcome</h1> */}
-
-
-                <div className="row home" >
-                    {/* <HeroSection /> */}
-
-                    {templates.map((template, index) => {
-                        return (
-                            <div className="col-md-4  " style={{ marginLeft: '120px' }}>
-                                <div className="template" >
-                                    <img
-                                        src={template.image}
-                                        height="500"
-                                        alt=""
-                                        width='100%'
-                                        style={{ textAlign: 'center' }}
-                                    />
-                                    <div className="text" style={{ marginLeft: '20px' }}>
-                                        <p>{template.title}</p>
-                                        <button onClick={() => navigate(`/templates/${index + 1}`)}>
-                                            TRY
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        );
-                    })}
+                <div className="hero-section">
+                    <div className="hero-content">
+                        <h1>Build Your</h1>
+                        <h2>Professional Resume</h2>
+                        <p>Create stunning resumes with our easy-to-use builder</p>
+                        <Link to='/profile'>
+                            <button>Get Started</button>
+                        </Link>
+                    </div>
+                    <div className="hero-image">
+                        <img src={"https://play-lh.googleusercontent.com/L1-b09NFFFleqN3JoZ3TSeU0noGIx-7ylYUm2hQ9ePiLvx74axg5yes8tnvm63M9LkQ"} alt="Hero" />
+                    </div>
                 </div>
-            </DefaultLayout >
+            </DefaultLayout>
+
         </>
     );
 }
 
-export default Home;
+export default Home

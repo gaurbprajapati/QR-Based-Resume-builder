@@ -3,22 +3,22 @@ import Register from './pages/Register';
 import Home from './pages/Home';
 import Profile from './pages/Profile';
 // import DefaultLayout from './components/DefaultLayout';
-import Templates from './pages/templates';
+import Templates from './pages/templates/Templates';
 import './App.css';
 // import 'antd/dist/antd.less';
 // import 'antd/dist/antd.min.css;
 import 'antd/dist/antd.less';
+import DefaultLayout from './components/DefaultLayout';
 
 // import { Button } from 'antd';
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import Templateshome from './pages/Templateshome';
 
 function App() {
 
   return (
     <>
-
-      <section>
-
+      <section className='Appp'>
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<ProtectedRoute><Home /></ProtectedRoute>} />
@@ -27,6 +27,7 @@ function App() {
             <Route path="/templates/:id" element={<ProtectedRoute><Templates /></ProtectedRoute>} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
+            <Route path="/templates" element={<Templateshome />} />
           </Routes>
         </BrowserRouter>
       </section>

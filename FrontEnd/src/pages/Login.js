@@ -37,16 +37,16 @@ function Login() {
             <section>
 
                 <div className="auth-parent">
-                    <h1 style={{ marginRight: '90px', color: 'white', fontSize: '300%' }} >LOGIN TO TECH TONIC<br /> </h1>
+                    <h1 style={{ marginRight: '90px', color: 'black', fontSize: '300%' }} >LOGIN TO <span>GROW UP </span></h1>
                     <Form layout='vertical' onFinish={onfinish}>
-                        <h1>Login</h1>
+                        <h2>Login</h2>
                         {loading && (<Spin size='large' />)}
                         <hr />
-                        <Form.Item name='username' label='Username'  >
+                        <Form.Item name='username' label='Username' rules={[{ required: true, message: 'Password require' }]}>
                             <Input />
                         </Form.Item>
                         <br />
-                        <Form.Item name='password' label='Password'  >
+                        <Form.Item name='password' label='Password' rules={[{ required: true, message: 'Password require' }]}  >
                             <Input type="password" />
                         </Form.Item>
                         <br />
