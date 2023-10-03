@@ -4,16 +4,11 @@ import './../resources/defaultlayout.css'
 import { useNavigate, Link } from 'react-router-dom';
 // import { UserOutlined } from "@ant-design/icons";
 
-// import HeroSection from "../pages/Home/HeroSection";
-// import ResourceCard from "./ResourceCard/ResourceCard.jsx";
-// import ClubCard from './ClubCard/Clubcard.jsx'
 
 function DefaultLayout(props) {
-    const user = JSON.parse(localStorage.getItem('sheyresume-user'))
+    // const user = JSON.parse(localStorage.getItem('sheyresume-user'))
     const navigate = useNavigate();
-    // const menu = (
 
-    // );
     return (
         <>
             <div className='layout'>
@@ -51,32 +46,16 @@ function DefaultLayout(props) {
                 <div className="content" >{props.children}</div>
 
 
-                {/* <HeroSection />
-                <ResourceCard />
-                <ClubCard /> */}
+
             </div >
 
 
-            {/* <ResourceCard />
-            <ClubCard />
-            <Footer /> */}
+
         </>
     )
 
-    function newFunction() {
-        return <div className="btn-group">
-            <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Action
-            </button>
-            <div class="dropdown-menu">
-                <a className="dropdown-item" href="#">Action</a>
-                <a className="dropdown-item" href="#">Another action</a>
-                <a className="dropdown-item" href="#">Something else here</a>
-                <div className="dropdown-divider"></div>
-                <a className="dropdown-item" href="#">Separated link</a>
-            </div>
-        </div>
-    }
+
 }
+
 
 export default DefaultLayout
