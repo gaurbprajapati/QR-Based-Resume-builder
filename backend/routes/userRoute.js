@@ -12,9 +12,7 @@ router.post("/register", userRegister);
 router.post("/update", userUpdate);
 
 // router.get("/test",check);
-router.get("/test", (req, res) => {
-    res.send('Working World!')
-});
+router.get("/test", check);
 
 
 

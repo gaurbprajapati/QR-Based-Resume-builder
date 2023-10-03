@@ -4,7 +4,6 @@ import cors from 'cors';
 import { config } from 'dotenv';
 import userRoute from './routes/userRoute.js';
 import { connectDB } from './data/dbConnect.js';
-import { User } from './models/userModel.js';
 
 const app = express();
 
@@ -38,43 +37,5 @@ connectDB();
 // }
 
 app.get('/home', (req, res) => res.send('Hello World!'))
-
-app.post('/login', async (req, res) => {
-    try {
-        const result = await User.findOne({
-            username: req.body.username,
-            password: req.body.password,
-        });
-
-        if (result) {
-            res.send(result);
-        } else {
-            res.status(400).json("Login failed");
-        }
-    } catch (error) {
-        res.status(400).json(error);
-    }
-}
-);
-
-app.post("/register", async (req, res) => {
-    try {
-        const newuser = new User(req.body);
-        await newuser.save();
-        res.send("Registration Successful");
-    } catch (error) {
-        res.status(400).json(error);
-    }
-})
-
-app.post("/update", async (req, res) => {
-    try {
-        await User.findOneAndUpdate({ _id: req.body._id }, req.body);
-        const user = await User.findOne({ _id: req.body._id });
-        res.send(user);
-    } catch (error) {
-        res.status(400).json(error);
-    }
-})
 // app.get('/details', (req, res) => res.send('H!')
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
