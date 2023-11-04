@@ -5,7 +5,8 @@ import Profile from './pages/Profile';
 import Templates from './pages/templates/Templates';
 import './App.css';
 
-import 'antd/dist/antd.less';
+// import 'antd/dist/antd.min.css';
+
 
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Templateshome from './pages/Templateshome';
